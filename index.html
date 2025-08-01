@@ -11,8 +11,8 @@
         body {
             font-family: Arial, sans-serif;
             color: black;
-            background: #020024;
-            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(100, 155, 237, 1) 0%, rgba(0, 212, 255, 1) 100%);
+            background: #245d8f;
+            background: radial-gradient(circle, rgba(36, 93, 143, 1) 0%, rgba(39, 159, 207, 1) 100%);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -31,22 +31,23 @@
 
         input[type="password"],
         input[type="text"] {
-            font-size: 18px;
+            width: 85%;
+            font-size: 16px;
             border-radius: 5px;
-            padding: 5px;
+            padding: 10px 40px 10px 10px;
             border: 1px solid #000;
-            margin-bottom: 10px;
         }
 
         #btn-validate {
-            background-color: #82aefb;
+            background-color: #6d9ae8;
             border: none;
             border-radius: 10px;
             padding: 7px 20px;
+            margin-top: 10px;
             font-size: 16px;
             box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
         }
 
         #btn-validate:hover {
@@ -80,6 +81,8 @@
         </div>
         <button id="btn-validate" onclick="validar()">Validar</button>
     </div>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function validar() {
@@ -96,15 +99,15 @@
         //     });
         // }
 
-         const password = document.getElementById("password");
-         const togglePassword = document.getElementById("toggle-password");
+        const password = document.getElementById("password");
+        const togglePassword = document.getElementById("toggle-password");
 
-         togglePassword.addEventListener("click", () => {
-             const type = password.type === "password" ? "text" : "password";
-             password.type = type;
-             togglePassword.classList.toggle("fa-eye");
-             togglePassword.classList.toggle("fa-eye-slash");
-         });
+        togglePassword.addEventListener("click", () => {
+            const type = password.type === "password" ? "text" : "password";
+            password.type = type;
+            togglePassword.classList.toggle("fa-eye");
+            togglePassword.classList.toggle("fa-eye-slash");
+        });
     </script>
 </body>
 
