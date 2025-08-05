@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+menu {
+    display: flex;
+    height: 40px;
+    background-color: rgb(30, 195, 30);
+    margin: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    padding: 0 16px;
+    transition: background-color 0.3s ease-in-out;
+    color: #f9f4f4;
+}
+
+a:hover {
+    background-color: rgb(49, 151, 49);
+
+}
