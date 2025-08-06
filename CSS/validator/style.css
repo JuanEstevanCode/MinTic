@@ -11,6 +11,9 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -43,7 +46,6 @@ input[type="text"] {
 #btn-validate:hover {
     background: #3877e5;
     color: white;
-    transform: scale(1.1);
 }
 
 .toggle-password {
@@ -58,4 +60,15 @@ input[type="text"] {
 .inputs {
     position: relative;
     width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #888;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #5d5656;
+    text-decoration: underline;
 }
