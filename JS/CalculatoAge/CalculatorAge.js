@@ -9,7 +9,9 @@ function calcularEdad() {
         const date = new Date(dateInput);
         const today = new Date();
         let edad = today.getFullYear() - date.getFullYear()
-        if (edad < 0 || (edad === 0 && today.getDate() < date.getDate())) {
+        const mesesToday = today.getMonth()
+        const mesNacido = date.getMonth()
+        if (mesesToday < mesNacido || edad < 0 || (edad === 0 && today.getDate() < date.getDate())) {
             edad--;
         }
         Swal.fire(`Tienes ${edad} años`)
